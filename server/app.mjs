@@ -1,14 +1,15 @@
-import express from "express";
 import "dotenv/config";
+import express from "express";
+import cors from "cors";
 import { connectToDatabase } from "./db/conn.mjs";
 import authRouter from "./routes/authRouter.mjs";
-import requireAuth from "./middlewares/requireAuth.mjs";
 
 const port = process.env.PORT || 3001;
 const app = express();
 
 // middlewares
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
     console.log(`${req.method}\t ${new Date().toLocaleString()}\t ${req.url}`);

@@ -1,0 +1,106 @@
+.auth-form-container {
+  height: 100%;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.auth-form-wrapper {
+  min-width: 400px;
+  width: 30%;
+  max-width: 600px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.auth-form.login {
+  transform: rotateY(0deg);
+}
+
+.auth-form.register {
+  transform: rotateY(180deg);
+}
+
+.auth-form-wrapper.login-view {
+  transform: rotateY(0deg);
+}
+
+.auth-form-wrapper.register-view {
+  transform: rotateY(180deg);
+}
+
+.auth-form h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  color: #666;
+}
+
+.form-group input {
+  width: -webkit-fill-available;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: red !important;
+  text-align: left;
+  margin-top: 5px;
+  font-size: 0.7rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5151e5;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+p {
+  margin-top: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+p:hover {
+  color: #5151e5;
+}
+
+.password-label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.password-label a{
+    font-size: 0.8rem;
+}
