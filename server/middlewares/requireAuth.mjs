@@ -15,7 +15,7 @@ router.use((req, res, next) => {
     }
     return decoded;
   });
-  res.user = decoded;
+  req.user = decoded;
   next();
 });
 
